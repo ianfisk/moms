@@ -1,0 +1,23 @@
+@font-face {
+	font-family: Montserrat;
+	src: url('../fonts/Montserrat-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'Montserrat-Bold';
+	src: url('../fonts/Montserrat-Bold.ttf');
+}
+
+* {
+	font-family: 'Montserrat', sans-serif;
+}
+
+body {
+	background-color: rgb(255, 193, 166);
+	background-image: url('../images/bg.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100vw;
+	height: 100vh;
+	margin: 0;
+}

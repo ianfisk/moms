@@ -1,0 +1,49 @@
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	padding: 12px;
+	flex-direction: column;
+}
+
+.mom-form {
+	width: 450px;
+	max-width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.mom-form label {
+	color: white;
+}
+
+#generate-message-button {
+	width: 150px;
+	align-self: center;
+}
+
+.my-modal-backdrop {
+	background: rgba(0,0,0,0.5);
+}
+
+.my-modal-content {
+	-webkit-transform: translateY(35%);
+	-moz-transform: translateY(35%);
+	transform: translateY(35%);
+	margin: 0 40px;
+}
+
+.my-modal-body {
+	display: flex;
+}
+
+.link-input {
+	margin-right: 12px;
+}
+
+.overflow-ellipsis {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
