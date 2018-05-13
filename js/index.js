@@ -52,9 +52,17 @@
 		linkModal.style.display = 'block';
 		linkModal.style.opacity = 1;
 
-		document.getElementById('copyButton').addEventListener('click', () => {
-			copyToClipboard(linkInput);
-		});
+		const copyButton = document.getElementById('copyButton');
+		if (deviceIsIos()) {
+			copyButton.style.display = 'none';
+			linkInput.addEventListener('click', () => {
+				linkInput.select();
+			});
+		} else {
+			copyButton.addEventListener('click', () => {
+				copyToClipboard(linkInput);
+			});
+		}
 
 		const modalCloseButtons = document.getElementsByClassName('close-button');
 		for (let i = 0; i < modalCloseButtons.length; i++) {
@@ -89,21 +97,7 @@
 	}
 
 	function copyToClipboard(inputOrTextArea) {
-		const isIos = deviceIsIos();
-
-		if (isIos) {
-			const range = document.createRange();
-			range.selectNodeContents(inputOrTextArea);
-
-			const selection = window.getSelection();
-			selection.removeAllRanges();
-			selection.addRange(range);
-
-			inputOrTextArea.setSelectionRange(0, value.length);
-		} else {
-			inputOrTextArea.select();
-		}
-
+		inputOrTextArea.select();
 		document.execCommand('copy');
 	}
 
