@@ -11,6 +11,15 @@
 	<link href="css/common.css" rel="stylesheet">
 	<link href="css/index.css" rel="stylesheet">
 	<script type="text/javascript" src="js/index.js" async></script>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js', { scope: './' })
+				.then(function(reg) {
+					console.log('Service worker registration succeeded. Scope is ' + reg.scope);
+				});
+		}
+	</script>
 </head>
 <body>
 	<div class="main">

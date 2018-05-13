@@ -12,6 +12,15 @@
 	<script type="text/javascript" src="js/message.js" async></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenLite.min.js" async></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js" async></script>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker.register('sw.js', { scope: './' })
+				.then(function(reg) {
+					console.log('Service worker registration succeeded. Scope is ' + reg.scope);
+				});
+		}
+	</script>
 </head>
 <body>
 	<div class="main"></div>
