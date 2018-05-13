@@ -5,6 +5,7 @@
 	height: 100%;
 	padding: 12px;
 	flex-direction: column;
+	color: white;
 }
 
 .mom-form {
@@ -12,10 +13,6 @@
 	max-width: 100%;
 	display: flex;
 	flex-direction: column;
-}
-
-.mom-form label {
-	color: white;
 }
 
 #generate-message-button {

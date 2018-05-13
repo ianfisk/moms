@@ -1,10 +1,10 @@
 (function () {
 	const messageItemClass = 'message-item';
 	const messageCreators = [
-		messageData => 'Dear Mom, aka ' + messageData.momName + '.',
-		() => "Happy Mother's Day! This day is yours.",
-		messageData => 'On ' + messageData.birthdate + ', your life was forever changed when I came into this world, and I can never be thankful enough.',
-		messageData => 'I am so grateful you are my mother. I love spending time with you, ' + messageData.faveThing + ' with you, doing all the things with you.',
+		messageData => 'Dear ' + (messageData.momName || 'Mom') + ',',
+		() => "Happy Mother's Day! This day is for you.",
+		messageData => 'On ' + (messageData.birthdate || 'my birthday') + ', you became my ' + (messageData.momName || 'Mom') + '.',
+		messageData => 'From that day forward, I have loved spending time with you, learning from you, and ' + (messageData.faveThing || 'being') + ' with you.',
 		() => 'I love you, Mom. ❤️',
 	];
 
