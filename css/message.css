@@ -43,6 +43,24 @@ body {
 	transform: translate(-50%, 0);
 }
 
+.index-link {
+	position: absolute;
+	bottom: 32px;
+	left: 10px;
+	font-size: 16px;
+	color: white;
+	opacity: 0;
+	display: none;
+	-webkit-transition: opacity 300ms;
+	-moz-transition: opacity 300ms;
+	-o-transition: opacity 300ms;
+	transition: opacity 300ms;
+}
+
+.index-link:hover {
+	color: lightskyblue;
+}
+
 @media (max-width: 544px) {
 	.arrow {
 		bottom: 10px;

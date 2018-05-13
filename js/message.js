@@ -9,6 +9,7 @@
 	];
 
 	let currentMessageIndex = 0;
+	let linkTimeout = null;
 
 	function showMessages() {
 		const query = parseQuery(window.location.search);
@@ -43,6 +44,8 @@
 	}
 
 	function handleMoveToNextMessage(direction) {
+		clearTimeout(linkTimeout);
+
 		const messages = document.getElementsByClassName(messageItemClass);
 		if (direction === 'up') {
 			currentMessageIndex = Math.max(0, currentMessageIndex - 1);
@@ -50,7 +53,19 @@
 			currentMessageIndex = Math.min(messages.length - 1, currentMessageIndex + 1);
 		}
 
-		document.getElementById('downArrowButton').style.display = currentMessageIndex === messages.length - 1 ? 'none' : 'inline-block';
+		const downArrow = document.getElementById('downArrowButton');
+		const indexLink = document.getElementById('indexLink');
+		if (currentMessageIndex === messages.length - 1) {
+			downArrow.style.display = 'none';
+			indexLink.style.display = 'inline-block';
+			linkTimeout = setTimeout(() => {
+				indexLink.style.opacity = 1;
+			}, 2000);
+		} else {
+			downArrow.style.display = 'inline-block';
+			indexLink.style.display = 'none';
+			indexLink.style.opacity = 0;
+		}
 
 		const currentMessage = messages[currentMessageIndex];
 		TweenLite.to(
