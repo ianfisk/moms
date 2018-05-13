@@ -1,4 +1,4 @@
-const cacheName = 'moms-v2';
+const cacheName = 'moms-v3';
 
 self.addEventListener('install', event => {
 	self.skipWaiting();
@@ -14,6 +14,7 @@ self.addEventListener('install', event => {
 				'css/message.css',
 				'fonts/Montserrat-Regular.ttf',
 				'images/bg.png',
+				'images/bg-mobile.png',
 				'images/down-arrow.png',
 				'js/index.js',
 				'js/message.js',

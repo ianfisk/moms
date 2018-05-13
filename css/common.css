@@ -16,3 +16,9 @@ body {
 	height: 100vh;
 	margin: 0;
 }
+
+@media (max-width: 544px) {
+	body {
+		background-image: url('../images/bg-mobile.png');
+	}
+}
