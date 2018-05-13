@@ -35,6 +35,7 @@
 		itemContainer.className = messageItemClass;
 
 		const item = document.createElement('span');
+		item.className = 'message-item-text';
 		item.textContent = message;
 		itemContainer.appendChild(item);
 

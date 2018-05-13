@@ -22,6 +22,10 @@ body {
 	color: white;
 }
 
+.message-item-text {
+	padding-bottom: 100px;
+}
+
 .button-no-styling {
 	background: none;
 	border: none;
