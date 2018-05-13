@@ -1,6 +1,8 @@
-const cacheName = 'moms-v1';
+const cacheName = 'moms-v2';
 
 self.addEventListener('install', event => {
+	self.skipWaiting();
+
 	event.waitUntil(
 		caches.open(cacheName).then(cache => {
 			return cache.addAll([
@@ -20,6 +22,14 @@ self.addEventListener('install', event => {
 				'https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/plugins/ScrollToPlugin.min.js',
 			]);
 		})
+	);
+});
+
+self.addEventListener('activate', event => {
+	event.waitUntil(
+		caches.keys().then(keys => Promise.all(
+			keys.map(key => key !== cacheName ? caches.delete(key) : Promise.resolve())
+		))
 	);
 });
 
