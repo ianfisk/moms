@@ -42,3 +42,13 @@ body {
 	-moz-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
 }
+
+@media (max-width: 544px) {
+	.arrow {
+		bottom: 10px;
+	}
+
+	.message-item {
+		font-size: 28px;
+	}
+}

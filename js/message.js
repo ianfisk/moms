@@ -50,6 +50,8 @@
 			currentMessageIndex = Math.min(messages.length - 1, currentMessageIndex + 1);
 		}
 
+		document.getElementById('downArrowButton').style.display = currentMessageIndex === messages.length - 1 ? 'none' : 'inline-block';
+
 		const currentMessage = messages[currentMessageIndex];
 		TweenLite.to(
 			document.querySelector('.main'),

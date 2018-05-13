@@ -31,7 +31,8 @@
 	-webkit-transform: translateY(35%);
 	-moz-transform: translateY(35%);
 	transform: translateY(35%);
-	margin: 0 40px;
+	margin: auto;
+	max-width: 500px;
 }
 
 .my-modal-body {
@@ -46,4 +47,10 @@
 	text-overflow: ellipsis;
 	overflow: hidden;
 	white-space: nowrap;
+}
+
+@media (max-width: 544px) {
+	.my-modal-content {
+		margin: 0 40px;
+	}
 }
