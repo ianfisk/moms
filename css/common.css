@@ -3,11 +3,6 @@
 	src: url('../fonts/Montserrat-Regular.ttf');
 }
 
-@font-face {
-	font-family: 'Montserrat-Bold';
-	src: url('../fonts/Montserrat-Bold.ttf');
-}
-
 * {
 	font-family: 'Montserrat', sans-serif;
 }
