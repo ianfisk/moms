@@ -20,6 +20,7 @@ body {
 	font-size: 36px;
 	font-weight: 900;
 	color: white;
+	text-shadow: rgba(0,0,0,0.5) 1px 0 12px;
 }
 
 .message-item-text {
